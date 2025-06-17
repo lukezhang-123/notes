@@ -11,6 +11,8 @@ taskkill /F /IM explorer.exe & start explorer
 ```
 管理员打开cmd
 reagentc /info  # 位置 harddisk5\partition4
+reagentc /disable
+
 diskpart
 list disk
 select disk 5
