@@ -26,3 +26,15 @@ delete partition override
 
 https://superuser.com/questions/1453790/how-to-move-the-recovery-partition-on-windows-10
 
+```
+复制恢复分区的文件到新的盘尾分区，diskgenius,工具，克隆分区，文件复制
+
+diskpart 设置新恢复分区属性
+set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac override
+gpt attributes=0x8000000000000001
+
+reagentc /disable
+Reagentc /setreimage /path S:\Recovery\WindowsRE
+reagentc /enable
+reagentc /info
+```
