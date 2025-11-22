@@ -26,3 +26,16 @@ echo $(TZ=Asian/Dubai date -d @1762257000 +'%Y-%m-%d %H:%M:%S')
 ```
 ll --block-size=M path
 ```
+
+### 查看当前bash类型，默认shell
+
+```
+echo $SHELL
+ps -p $$
+echo $0
+```
+
+### 查看分区 格式ext4 uuid
+
+```lsblk -f```
+
