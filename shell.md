@@ -1,4 +1,16 @@
 
+### 检查rsa公私钥匹配，私钥生成公钥，对比现在公钥内容
+
+```
+ssh-keygen -y -e -f <private key>
+```
+
+### 计算ssh公钥sha256
+
+```
+ssh-keygen -lf ~/.ssh/id_rsa.pub
+```
+
 ### screen
 
 ```
