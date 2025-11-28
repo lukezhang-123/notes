@@ -38,3 +38,36 @@ Reagentc /setreimage /path S:\Recovery\WindowsRE
 reagentc /enable
 reagentc /info
 ```
+
+- powershell升级，打开powershell
+
+```
+当前版本
+$PSVersionTable.PSVersion
+查看可用版本
+winget search Microsoft.PowerShell
+安装新版本，从winget源安装Microsoft.Powershell
+winget install --id Microsoft.Powershell --source winget
+
+随便目录里，右键，在终端中打开，上面最后向下箭头，设置，左边导航，启动，右边最上面第一个，默认配置文件，下拉选择，powershell，原来的默认是windows powershell，重新打开powershell，第一行显示新版本号表示修改默认powershell为最新版成功
+```
+
+- powershell修改类似ps1提示符
+
+```
+用vscode打开profile文件，C:\Users\xxx\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+code $PROFILE
+```
+
+```
+function prompt {
+    $dateTime = get-date -Format "yyyy.MM.dd HH:mm:ss"
+    $currentDirectory = $(Get-Location)
+
+    write-host "$dateTime" -NoNewline -ForegroundColor green
+    # Convert-Path needed for pure UNC-locations
+    write-host " $(Convert-Path $currentDirectory)" -ForegroundColor gray
+    write-host ">" -NoNewline -ForegroundColor Yellow
+    return " "
+}
+```
