@@ -71,3 +71,20 @@ function prompt {
     return " "
 }
 ```
+
+- 运行 netplwiz 创建用户
+
+- windows11 使用Microsoft账户不能远程桌面RDP
+
+```
+确定端口 connected
+curl -kv ip:3389
+
+设置（Win + I），账户 > 登录选项
+关闭“为了提高安全性，仅允许对此设备上的 Microsoft 账户使用 Windows Hello 登录（推荐）”
+重启，使用Microsoft账户密码登录一次
+尝试RDP登录
+开启  Windows Hello 登录
+```
+
+
