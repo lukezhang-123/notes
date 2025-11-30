@@ -1,4 +1,28 @@
 
+### 暂停history记录
+
+```
+记忆，设置history off，+o理解为设置为off，-o是取消off
+set +o history
+set -o history
+
+```
+
+### 记录命令到history
+
+```
+执行注释行，记录到history, 需要 ctrl d，或者exit正常退出
+# your command
+立即追加当前session到history
+history -a
+
+新session读取history
+history -r
+打印出指定序号的history命令，上翻第一个，方便编辑
+!NUMBER:p
+
+```
+
 ### 检查rsa公私钥匹配，私钥生成公钥，对比现在公钥内容
 
 ```
