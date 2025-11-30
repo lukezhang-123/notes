@@ -11,3 +11,7 @@ https://stackoverflow.com/questions/67914787/what-is-restricted-mode-in-the-vs-c
 - 修复vscode右键打开
 
 https://github.com/aweber1/FixMicrosoft/blob/aweber1-patch-1/Add_OpenWithCode.bat
+
+
+- ctrl + e 搜索文件名
+
