@@ -1,4 +1,20 @@
 
+
+### 打印日志，右对齐输出ok
+
+```
+printf "%20s\n" "Your Text"
+
+printf "%${COLUMNS}s\n" "Your Text"
+
+MSG="Hello World"
+COLS=$(tput cols) # Get terminal width
+let COL_POS=COLS-${#MSG} # Calculate the position for the status
+echo -n "$MSG"
+printf "%${COL_POS}s" "[OK]"
+echo "" # Add a final newline
+```
+
 ### 暂停history记录
 
 ```
